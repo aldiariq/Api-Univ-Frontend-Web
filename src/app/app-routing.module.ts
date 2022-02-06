@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './autentikasi/login/login.component';
+import { NotfoundurlComponent } from './notfoundurl/notfoundurl.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path:'utama',
     loadChildren:()=>import('./utama/utama.module').then(module=>module.UtamaModule)
+  },
+  {
+    path:'**',
+    pathMatch: 'full',
+    component:NotfoundurlComponent
   }
 ];
    
