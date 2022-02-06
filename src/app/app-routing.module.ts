@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path:'',
     pathMatch:'full',
-    redirectTo:'utama'
+    redirectTo:'utama/**'
   },
   {
     path:'autentikasi',
